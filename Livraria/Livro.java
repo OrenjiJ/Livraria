@@ -3,7 +3,7 @@ package Livraria;
 public class Livro {
     String nome;
     String descricao;
-    double valor;
+    private double valor;
     String isbn;
     Autor autor;
 
@@ -21,5 +21,19 @@ public class Livro {
     }
     boolean temAutor(){
         return this.autor !=null;
+    }
+
+    public boolean aplicaDescontodDe(double porcentagem){
+        if (porcentagem>0.3){
+            return false;
+        }
+        this.valor-=this.valor*porcentagem;
+        return true;
+    }
+    void adicionaValor(double valor){
+        this.valor = valor;
+    }
+    double retornaValor(){
+        return this.valor;
     }
 }
