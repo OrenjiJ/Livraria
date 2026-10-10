@@ -2,7 +2,10 @@ package Livraria;
 
 public class RegrasDeDesconto {
     public static void main(String[] args) {
-        Livro livro = new Livro();
+        Autor primeiroAutor = new Autor();
+        primeiroAutor.setNome("Lucas Meira");
+
+        Livro livro = new Livro(primeiroAutor);
         livro.setValor(59.90);
 
         System.out.println("Valor atual:" + livro.getValor());

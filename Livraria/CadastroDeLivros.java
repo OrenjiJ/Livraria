@@ -7,7 +7,7 @@ public class CadastroDeLivros {
         autor.setEmail("rodrigoturini@caelum.com.br");
         autor.setCpf("123.456.789.10");
 
-        Livro livro = new Livro();
+        Livro livro = new Livro(autor);
         livro.setNome("Java 8 Prático");
         livro.setDescricao("Novos recursos da linguagem");
         livro.setValor(59.90);
@@ -23,7 +23,7 @@ public class CadastroDeLivros {
         outroAutor.setCpf("123.456.789.10");
 
 
-        Livro outroLivro = new Livro();
+        Livro outroLivro = new Livro(outroAutor);
         outroLivro.setNome("Lógica de programação");
         outroLivro.setDescricao("Crie seus primeiros programas.");
         outroLivro.setValor(59.90);

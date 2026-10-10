@@ -7,6 +7,11 @@ public class Livro {
     private String isbn;
     private Autor autor;
 
+    public Livro(Autor autor) {
+        this.setAutor(autor);
+        this.setIsbn("000-00-00000-00-0");
+    }
+
     void mostrarDetalhes() {
         String mensagem = "Mostrandp detalhes do livro";
         System.out.println(mensagem);
