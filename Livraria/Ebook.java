@@ -1,6 +1,8 @@
 package Livraria;
 
-public class Ebook extends Livro{
+public class Ebook extends Livro implements Promocional{
+    //atributos e metodos omitidos
+
     private String watermark;
 
     public Ebook (Autor autor) {
@@ -11,7 +13,9 @@ public class Ebook extends Livro{
         if (porcentagem > 0.15) {
             return false;
         }
-        this.setValor(this.getValor() - desconto);
+
+        double desconto = getValor() * porcentagem;
+        setValor(getValor() - desconto);
         return true;
     }
     public String getWatermark() {
